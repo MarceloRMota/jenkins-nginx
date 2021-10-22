@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 
-resource "aws_instance" "maquina_nginx_mmota" {
+resource "aws_instance" "nginx_mmota" {
   ami                         = "ami-054a31f1b3bf90920"
   instance_type               = "t2.micro"
   subnet_id                   = "subnet-0a7ce1b942558345a"
@@ -83,7 +83,8 @@ resource "aws_security_group" "acessos" {
 # terraform refresh para mostrar o ssh
 output "aws_instance_e_ssh" {
   value = [
-    aws_instance.maquina_nginx_mmota.public_ip,
-    "ssh  ubuntu@${aws_instance.maquina_nginx_mmota.public_dns}"
+    aws_instance.nginx_mmota.public_ip,
+    aws_instance.nginx_mmota.id,
+    "ssh  ubuntu@${aws_instance.nginx_mmota.public_dns}"
   ]
 }
