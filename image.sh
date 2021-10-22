@@ -12,6 +12,14 @@ resource "aws_ami_from_instance" "nginx_mmota_image" {
   name               = "nginx_mmota_image"
   source_instance_id = ${IMAGE}
 }
+output "ami" {
+  value = [
+    "AMI: ${aws_ami_from_instance.nginx_mmota_image.id}"
+  ]
+}
+© 2021 GitHub, Inc.
+Terms
+
 EOF
 cd ../image/
 terraform init
