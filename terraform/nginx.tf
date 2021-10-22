@@ -83,7 +83,6 @@ resource "aws_security_group" "acessos" {
 # terraform refresh para mostrar o ssh
 output "aws_instance_e_ssh" {
   value = [
-    aws_instance.maquina_nginx_mmota.public_ip,
-    "ssh  ubuntu@${aws_instance.maquina_nginx_mmota.public_dns}"
+    aws_instance.maquina_nginx_mmota.public_dns
   ]
 }
