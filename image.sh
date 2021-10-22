@@ -9,7 +9,7 @@ provider "aws" {
 }
 
 resource "aws_ami_from_instance" "nginx_mmota_image" {
-  name               = "nginx_mmota"
+  name               = "nginx_mmota_image"
   source_instance_id = ${IMAGE}
 }
 EOF
