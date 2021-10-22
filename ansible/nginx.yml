@@ -14,7 +14,13 @@
         upgrade: yes
         update_cache: yes
         cache_valid_time: 86400 #Um dia
-
+  tasks:
+    - name: "Roda: sudo apt-get update"
+      become: true
+      apt:
+        name: '*'
+        state: latest
+ 
     - name: "Instala pacotes"
       apt:
         name: "{{ item }}"
