@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd terraform
-terraform destroy
+terraform destroy -auto-approve
 
 cd ../image
-terraform destroy
+terraform destroy -auto-approve
