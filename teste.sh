@@ -6,7 +6,7 @@ CURL=$(curl "http://$(terraform output |grep IP| sed 's/IP//g'|sed 's/,//g'|sed 
 
 regex='Welcome to nginx!' 
 
-if [ $CURL == $regex ] 
+if [[ $CURL =~ $regex ]] 
 then 
    echo "nginx no ar"
 else
