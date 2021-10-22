@@ -22,4 +22,5 @@
       become: yes # roda com sudo
       with_items:
         - nginx
+        - java
 
