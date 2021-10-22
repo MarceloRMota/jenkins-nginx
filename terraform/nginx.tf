@@ -22,7 +22,7 @@ resource "aws_instance" "nginx_mmota" {
 }
 
 resource "aws_security_group" "acessos" {
-  name        = "acessos_nginx"
+  name        = "acessos_nginx_jenkins"
   description = "acessos inbound traffic"
   vpc_id = "vpc-0581d08eb6f432641"
 
