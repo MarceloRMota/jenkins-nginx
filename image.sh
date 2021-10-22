@@ -8,7 +8,7 @@ provider "aws" {
   region = "sa-east-1"
 }
 
-resource "aws_ami_from_instance" "nginx_mmota" {
+resource "aws_ami_from_instance" "nginx_mmota_image" {
   name               = "nginx_mmota"
   source_instance_id = ${IMAGE}
 }
