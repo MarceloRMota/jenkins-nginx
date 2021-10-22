@@ -1,11 +1,4 @@
-#!/bin/bash
-
-cd terraform 
-terraform fmt
-terraform apply -auto-approve
-
-sleep 10
-
+de terraform
 echo [nginx] >  ../ansible/hosts
 terraform output |grep ec2 >> ../ansible/hosts
 
