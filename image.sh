@@ -12,9 +12,8 @@ resource "aws_ami_from_instance" "nginx_mmota_image" {
   source_instance_id = ${IMAGE}
 }
 output "ami" {
-  value = [
-    "AMI: ${aws_ami_from_instance.nginx_mmota_image.id}"
-  ]
+  value = aws_ami_from_instance.nginx_mmota_image.id
+  
 }
 EOF
 cd ../image/
