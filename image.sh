@@ -2,7 +2,6 @@ mkdir image
 
 cd terraform
 IMAGE=$(terraform output| grep "i-"|sed  's/,//g')
-
 cat <<EOF > ../image/print.tf
 provider "aws" {
   region = "sa-east-1"
@@ -17,9 +16,6 @@ output "ami" {
     "AMI: ${aws_ami_from_instance.nginx_mmota_image.id}"
   ]
 }
-© 2021 GitHub, Inc.
-Terms
-
 EOF
 cd ../image/
 terraform init
