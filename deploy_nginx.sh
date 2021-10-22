@@ -1,6 +1,6 @@
-de terraform
-echo [nginx] >  ~/ansible
-terraform output |grep ec2 >> ~/ansible
+cd terraform
+echo [nginx] >  /var/lib/jenkins/workspace/PipeMota/ansible/hosts
+terraform output |grep ec2 >> /var/lib/jenkins/workspace/PipeMota/ansible/hosts
 
-cd ~/ansible
+cd /var/lib/jenkins/workspace/PipeMota/ansible
 ansible-playbook -i hosts nginx.yml -u ubuntu 

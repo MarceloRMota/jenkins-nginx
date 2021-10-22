@@ -1,5 +1,4 @@
 cd terraform
-
 IMAGE=$(terraform output| grep "i-"|sed  's/,//g')
 
 cat <<EOF > print.tf
